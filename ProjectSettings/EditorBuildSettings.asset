@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UI.unity
+    guid: 5e6c5c3887870024399e06ea90915191
+  - enabled: 1
+    path: Assets/Scenes/Kion Testing.unity
+    guid: 5e72bd6c8325d9e4c9d0920c1ff18222
   m_configObjects: {}
