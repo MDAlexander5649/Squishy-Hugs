@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayerHUD : MonoBehaviour
 {
+    public  GameObject Eyeopen;
     public Timer Mytimer;
     public GameObject overlay;
     private int Timeleft = 10;
@@ -14,6 +15,8 @@ public class PlayerHUD : MonoBehaviour
     {
         overlay.SetActive(false);
         Mytimer.StartTimer(1.0f);
+        Eyeopen.SetActive(false);
+        overlay.SetActive(true);
     }
 
     // Update is called once per frame
@@ -37,6 +40,15 @@ public class PlayerHUD : MonoBehaviour
                 Mytimer.StartTimer(1.0f);
             }
         }
+    }
+    public void Eyeopens()
+    {
+        Eyeopen.SetActive(true);
+        
+    }
+    public void Eyeclosed()
+    {
+        Eyeopen.SetActive(false);
     }
 
 }

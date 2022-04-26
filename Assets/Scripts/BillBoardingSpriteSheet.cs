@@ -21,17 +21,15 @@ public class BillBoardingSpriteSheet : MonoBehaviour
 
         Debug.Log(angle);
 
-        if (angle >= 30.0f && angle < 90.0f)
-            return 5; // Looking forward right
-        else if (angle >= 90.0f && angle < 150.0f)
-            return 4; // looking back right// looking back left
-        else if ((angle >= 150.0f && angle <= 180.0f) || (angle <= -150.0f && angle >= -180.0f))
-            return 3; // back
-        else if (angle <= -90.0f && angle > -150.0f)
-            return 2; // looking back left
-        else if (angle <= -30.0f && angle > -90.0f)
-            return 1; // looking forwar left
-        else if (angle > -30.0f || angle < 30.0f)
+        if (angle >= 45.0f && angle < 135.0f)
+            return 1; // Looking forward right
+        
+        else if ((angle >= 135.0f && angle <= 180.0f) || (angle <= -135.0f && angle >= -180.0f))
+            return 2; // back
+        else if (angle <= -45.0f && angle > -135.0f)
+            return 3; // looking left
+        
+        else if (angle > -45.0f || angle < 45.0f)
             return 0; // front
         else return 0;
     }
