@@ -29,7 +29,7 @@ public class PlayerHUD : MonoBehaviour
         if (Timeleft > 0)
         {
             Timeleft = Timeleft - 1;
-            countDown.text = Timeleft + "s";
+            //countDown.text = Timeleft + "s";
             if (Timeleft == 0)
             {
 

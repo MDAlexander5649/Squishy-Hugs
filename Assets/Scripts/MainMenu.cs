@@ -7,12 +7,20 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    public void ReturnToMainMenu ()
+    {
+        SceneManager.LoadScene("Scenes/UI");
+        Time.timeScale = 1.0f;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit!");
         Application.Quit();
+        SceneManager.LoadScene("Scenes/UI");
     }
 }

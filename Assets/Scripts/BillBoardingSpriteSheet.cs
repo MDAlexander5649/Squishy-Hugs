@@ -11,7 +11,10 @@ public class BillBoardingSpriteSheet : MonoBehaviour
     private Vector3 a;
     void Update()
     {
-        toManipulate.sprite = mySprites[GetAngleIndex()];
+        int index = GetAngleIndex();
+        if (index <= mySprites.Length)
+            toManipulate.sprite = mySprites[index];
+        
         toManipulate.gameObject.transform.LookAt(toFace);
     }
     int GetAngleIndex()
@@ -25,7 +28,7 @@ public class BillBoardingSpriteSheet : MonoBehaviour
             return 1; // Looking forward right
         
         else if ((angle >= 135.0f && angle <= 180.0f) || (angle <= -135.0f && angle >= -180.0f))
-            return 2; // back
+            return 2; // backs
         else if (angle <= -45.0f && angle > -135.0f)
             return 3; // looking left
         
